@@ -12,6 +12,10 @@
     "clean": "rm -rf www && mkdir www",
     "build": "yarn clean && cp -rf client/ www/client && cp -rf node_modules www/node_modules && cp -rf public/ www/public && cp config.js contacts.js server.js package.json www",
     "zip": "yarn build && cd www && zip -r -D ../app.zip *",
-    "deploy": "chmod +x ./bin/deploy.sh"
+    "deploy": "chmod +x ./bin/deploy.sh",
+    "frontend:install": "cd reactnd-contacts-complete && npm install",
+    "backend:install": "cd reactnd-contacts-server && npm install",
+    "frontend:build": "cd reactnd-contacts-complete && npm run build",
+    "backend:build": "cd reactnd-contacts-server && npm run build"
   }
 }
